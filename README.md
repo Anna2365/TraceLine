@@ -13,9 +13,9 @@ TraceLine 是一款基於前後端分離概念開發的 SPA 單頁式計畫管�
 
 # 技術
 
-後端開發：　ASP.NET Core Web API (C#)
+後端開發： ASP.NET Core Web API (C#)
 
-前端開發：　React.js、Bootstrap 5、SweetAlert2
+前端開發： React.js、Bootstrap 5、SweetAlert2
 
 資料庫： MS SQL Server
 
@@ -62,6 +62,7 @@ API 效能優化： 在特定情境使用 Dapper 增加效能運用，提升查�
 解決： 將數據獲取邏輯整合於父組件，並透過 Callback 函數達成跨組件的整合機制。
 
 
+
 2. 資訊負載與 UI 平衡
 
 問題： 列表卡片需展示多項資訊（日期、進度、內容），易造成視覺擁擠。
@@ -69,8 +70,7 @@ API 效能優化： 在特定情境使用 Dapper 增加效能運用，提升查�
 解決： 淡化次要資訊並強化核心進度數字，達成兼具資訊量與美感的平衡。
 
 
-# 介面展示
-
-
 
 # 介面展示
+
+
