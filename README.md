@@ -71,6 +71,29 @@ API 效能優化： 在特定情境使用 Dapper 增加效能運用，提升查�
 
 
 
+
 # 介面展示
+
+
+# 技術架構
+```mermaid
+graph TD
+    User((使用者)) -->|操作 UI| React[React.js 前端介面]
+    React -->|JWT 驗證請求| API{ASP.NET Core API}
+    API -->|查詢/更新| DB[(MS SQL Server)]
+    
+    subgraph "Backend Logic"
+    API --- Service[加權進度計算邏輯]
+    API --- Repo[Repository 資料存取層]
+    end
+    
+    subgraph "Data Access"
+    Repo --- EF[EF Core: 維護/關聯]
+    Repo --- Dapper[Dapper: 高效查詢]
+    end
+
+
+
+
 
 
