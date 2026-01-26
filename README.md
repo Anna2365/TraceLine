@@ -9,7 +9,24 @@ TraceLine 是一款基於前後端分離概念開發的 SPA 單頁式計畫管�
 開發動機源於對現代碎片化任務管理的思考：　
 許多工具僅停留在代辦清單層面，缺乏「目標脈絡」。本專案透過 「主子計畫」的層級架構，協助使用者從主要目標（主計畫）深入到各個階段的步驟（子計畫），並透過自動化的進度加權計算，掌握整體進度。
 
-# 技術架構
+
+## 使用技術
+
+- 後端開發： ASP.NET Core Web API (C#)
+
+- 前端開發： React.js、Bootstrap 5、SweetAlert2
+
+- 資料庫： MS SQL Server
+
+- ORM / 資料庫存取： Entity Framework Core、 Dapper
+
+- 身份驗證： JWT 認證機制
+
+- 架構設計： 三層式架構、RESTful API Design
+
+---
+
+# 技術架構圖
 ```mermaid
 graph TD
     User((使用者)) -->|操作 UI| React[React.js 前端介面]
@@ -26,21 +43,6 @@ graph TD
     Repo --- Dapper[Dapper: 高效查詢]
     end
 ```
-
-
-## 技術
-
-- 後端開發： ASP.NET Core Web API (C#)
-
-- 前端開發： React.js、Bootstrap 5、SweetAlert2
-
-- 資料庫： MS SQL Server
-
-- ORM / 資料庫存取： Entity Framework Core、 Dapper
-
-- 身份驗證： JWT 認證機制
-
-- 架構設計： 三層式架構、RESTful API Design
 
 ---
 
@@ -70,24 +72,6 @@ graph TD
 
 ---
 
-## 技術挑戰與解決方案
-
-### 父子組件間的數據同步問題
-
-問題： 在子頁面更新數據後，主頁面列表無法即時反應最新進度。
-
-解決： 將數據獲取邏輯整合於父組件，並透過 Callback 函數達成跨組件的整合機制。
-
-
-
-### 資訊負載與 UI 平衡
-
-問題： 列表卡片需展示多項資訊（日期、進度、內容），易造成視覺擁擠。
-
-解決： 淡化次要資訊並強化核心進度數字，達成兼具資訊量與美感的平衡。
-
----
-
 ## 介面展示
 
 ### 會員登入
@@ -106,29 +90,28 @@ graph TD
 ![新增計畫表單](sub-plan-modal.jpg)
 *支援日期區間選取與驗證。*
 
+
+## 技術挑戰與解決方案
+
+### 父子組件間的數據同步問題
+
+問題： 在子頁面更新數據後，主頁面列表無法即時反應最新進度。
+
+解決： 將數據獲取邏輯整合於父組件，並透過 Callback 函數達成跨組件的整合機制。
+
+
+
+### 資訊負載與 UI 平衡
+
+問題： 列表卡片需展示多項資訊（日期、進度、內容），易造成視覺擁擠。
+
+解決： 淡化次要資訊並強化核心進度數字，達成兼具資訊量與美感的平衡。
+
 ---
 
+## 備註
 
-
-# 技術架構
-```mermaid
-graph TD
-    User((使用者)) -->|操作 UI| React[React.js 前端介面]
-    React -->|JWT 驗證請求| API{ASP.NET Core API}
-    API -->|查詢/更新| DB[(MS SQL Server)]
-    
-    subgraph "Backend Logic"
-    API --- Service[加權進度計算邏輯]
-    API --- Repo[Repository 資料存取層]
-    end
-    
-    subgraph "Data Access"
-    Repo --- EF[EF Core: 維護/關聯]
-    Repo --- Dapper[Dapper: 高效查詢]
-    end
-
-
-
+本專案為開發部分成果展示，主要呈現技術與架構思考。僅提供說明而未包含執行環境與原始碼。如欲了解更多實作細節，歡迎進一步聯繫。
 
 
 
