@@ -9,7 +9,7 @@ TraceLine 是一款基於前後端分離概念開發的 SPA 單頁式計畫管�
 開發動機源於對現代碎片化任務管理的思考：　
 許多工具僅停留在代辦清單層面，缺乏「目標脈絡」。本專案透過 「主子計畫」的層級架構，協助使用者從主要目標（主計畫）深入到各個階段的步驟（子計畫），並透過自動化的進度加權計算，掌握整體進度。
 
-[![Watch the video](https://img.youtube.com/vi/XYd6GOdy_U8/maxresdefault.jpg)](https://www.youtube.com/watch?v=XYd6GOdy_U8)
+[![Watch the video](https://img.youtube.com/vi/XYd6GOdy_U8/0.jpg)](https://www.youtube.com/watch?v=XYd6GOdy_U8)
 
 Youtube 影片連結 : https://www.youtube.com/watch?v=XYd6GOdy_U8
 
